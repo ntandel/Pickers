@@ -13,7 +13,7 @@
         <!--Single-->
         <scene sceneID="h2Z-AU-wN1">
             <objects>
-                <viewController id="02N-yZ-HAJ" sceneMemberID="viewController">
+                <viewController id="02N-yZ-HAJ" customClass="SingleComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cnd-6L-1Ii">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
         <!--Custom-->
         <scene sceneID="VwQ-iY-SLA">
             <objects>
-                <viewController id="xfe-ol-x6V" sceneMemberID="viewController">
+                <viewController id="xfe-ol-x6V" customClass="CustomPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHz-lj-d5E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,23 +45,49 @@
         <!--Date-->
         <scene sceneID="4O8-Bb-WCZ">
             <objects>
-                <viewController id="wyI-dt-bA6" sceneMemberID="viewController">
+                <viewController id="wyI-dt-bA6" customClass="DatePickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LAV-9d-1bu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SYS-fu-Xwb">
+                                <rect key="frame" x="0.0" y="130" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="592956569.79664004">
+                                    <!--2019-10-16 22:09:29 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEU-n4-R8n">
+                                <rect key="frame" x="171" y="381" width="72" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="wyI-dt-bA6" eventType="touchUpInside" id="G7t-Eq-kAT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Lz-Nr-NEm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Date" image="clockicon" id="h78-EE-VwJ"/>
+                    <connections>
+                        <outlet property="datepicker" destination="SYS-fu-Xwb" id="4Xq-bb-2LR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmF-Bx-UBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-496" y="-944"/>
+            <point key="canvasLocation" x="-497.10144927536237" y="-944.19642857142856"/>
         </scene>
         <!--Double-->
         <scene sceneID="CE7-hT-hgb">
             <objects>
-                <viewController id="LXi-Xj-V1c" sceneMemberID="viewController">
+                <viewController id="LXi-Xj-V1c" customClass="DoubleComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="scP-EV-1Th">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +103,7 @@
         <!--Dependent-->
         <scene sceneID="g2j-nG-rOF">
             <objects>
-                <viewController id="kMG-wq-2V2" sceneMemberID="viewController">
+                <viewController id="kMG-wq-2V2" customClass="DepententComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bOd-yU-Xzm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

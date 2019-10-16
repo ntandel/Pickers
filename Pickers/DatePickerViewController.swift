@@ -10,21 +10,21 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
 
+    @IBOutlet weak var datepicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onButtonPressed(_ sender: Any)
+    {
+        let date = datepicker.date
+        let message = "the date and time you selected is \(date)"
+        let alert = UIAlertController( title: "Date and Time selected", message: message, preferredStyle: .alert)
+        let action = UIAlertAction( title : "That's so true!", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
     }
-    */
-
+    
 }
