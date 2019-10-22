@@ -17,14 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="Cnd-6L-1Ii">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwV-9a-NhO">
+                                <rect key="frame" x="0.0" y="76" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pKU-gY-P4b" id="ovc-VL-96E"/>
+                                    <outlet property="delegate" destination="pKU-gY-P4b" id="gl5-Hp-E29"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIY-Qt-wKq">
+                                <rect key="frame" x="158" y="300" width="98" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Slect"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="02N-yZ-HAJ" eventType="touchUpInside" id="07X-D7-m0e"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Wpd-NP-21d"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="pKU-gY-P4b"/>
+                    <connections>
+                        <outlet property="singlePicker" destination="wwV-9a-NhO" id="yGJ-tS-tlA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jx6-kP-RMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="-778"/>
+            <point key="canvasLocation" x="279.71014492753625" y="-778.125"/>
         </scene>
         <!--Custom-->
         <scene sceneID="VwQ-iY-SLA">
@@ -91,14 +112,35 @@
                     <view key="view" contentMode="scaleToFill" id="scP-EV-1Th">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awW-HW-O32">
+                                <rect key="frame" x="0.0" y="87" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yzf-Dh-2hm" id="bS0-34-XSZ"/>
+                                    <outlet property="delegate" destination="yzf-Dh-2hm" id="FMU-LS-GzQ"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUV-9L-JM4">
+                                <rect key="frame" x="171" y="311" width="72" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="LXi-Xj-V1c" eventType="touchUpInside" id="TU8-b2-UZr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="al1-ji-Mk5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="yzf-Dh-2hm"/>
+                    <connections>
+                        <outlet property="doublePicker" destination="awW-HW-O32" id="Prf-i9-CnK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIf-2c-ugD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-218"/>
+            <point key="canvasLocation" x="963.76811594202911" y="-218.30357142857142"/>
         </scene>
         <!--Dependent-->
         <scene sceneID="g2j-nG-rOF">
